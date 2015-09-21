@@ -18,3 +18,4 @@ default['newrelic']['java_agent']['execute_agent_action'] = true
 default['newrelic']['java_agent']['app_location'] = node['newrelic']['java_agent']['install_dir']
 default['newrelic']['java_agent']['template']['cookbook'] = 'newrelic'
 default['newrelic']['java_agent']['template']['source'] = 'agent/newrelic.yml.erb'
+default['newrelic']['java_agent']['checksum'] = 'c667a11f5b0b2baa5f406a959e15b2d323996f6d0702407fc9e01dcf54efb53a'

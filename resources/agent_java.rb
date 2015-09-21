@@ -17,6 +17,7 @@ attribute :app_group, :kind_of => String, :default => 'newrelic'
 attribute :agent_type, :kind_of => String, :default => 'java'
 attribute :template_cookbook, :kind_of => String, :default => 'newrelic'
 attribute :template_source, :kind_of => String, :default => 'agent/newrelic.yml.erb'
+attribute :checksum, :kind_of => String, :default => nil
 
 attribute :enabled, :kind_of => [TrueClass, FalseClass], :default => true
 attribute :app_name, :kind_of => String, :default => nil

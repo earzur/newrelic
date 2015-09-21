@@ -54,6 +54,7 @@ def agent_jar
 
   remote_file "#{new_resource.install_dir}/newrelic.jar" do
     source https_download
+    checksum new_resource.checksum unless new_resource.checksum.nil?
     owner 'root'
     group 'root'
     mode 0664
