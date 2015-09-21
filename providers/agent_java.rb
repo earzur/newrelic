@@ -57,6 +57,7 @@ def agent_jar
     checksum new_resource.checksum unless new_resource.checksum.nil?
     owner new_resource.app_user
     group new_resource.app_group
+    checksum new_resource.checksum unless new_resource.checksum.nil?
     mode 0664
     action :create
   end
