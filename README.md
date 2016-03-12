@@ -148,6 +148,7 @@ Make sure you run Chef >= 0.10.0.
 * `node['newrelic']['java_agent']['log_daily']` - Override other log rolling configuration and roll the logs daily
 * `node['newrelic']['java_agent']['agent_action']` - Agent action, defaults to :install
 * `node['newrelic']['java_agent']['execute_agent_action']` - Execute the agent action or not, defaults to true
+* `node['newrelic']['java_agent']['enable_custom_tracing']` - Configure New Relic to detect custom traces
 * `node['newrelic']['java_agent']['app_location']` - Application server's location, defaults to nil
 * `node['newrelic']['java_agent']['template']['cookbook']` - Sets cookbook for template, defaults to 'newrelic'
 * `node['newrelic']['java_agent']['template']['source']` - Sets source for template, defaults to 'agent/newrelic.yml.erb'
@@ -231,6 +232,7 @@ The `newrelic_server_monitor` resource will handle the requirements to configure
 * `'pidfile'` defaults to nil
 * `'collector_host'` defaults to nil
 * `'timeout'` defaults to nil
+* `'alert_policy_id'` default to nil
 
 #### Example  
 ```ruby
@@ -252,6 +254,7 @@ The `newrelic_agent_php` resource will handle the requirements to install php ap
 #### Attribute parameters
 
 * `'license'` New Relic license key
+* `'api_key'` New Relic API key
 * `'install_silently'` - Determine whether to run the install in silent mode, defaults to false
 * `'app_name'` if missing it will default to `PHP Application`.
 * `'startup_mode'` - The newrelic-daemon startup mode ("agent"/"external"), defaults to "agent"
@@ -452,6 +455,7 @@ newrelic_agent_java 'Install' do
   license '0000ffff0000ffff0000ffff0000ffff0000ffff'  
   install_dir '/opt/newrelic/java'
   app_name 'java_test_app'
+```
 
 ### `newrelic_agent_python`  
 This cookbook includes an LWRP for installing the newrelic python agent
