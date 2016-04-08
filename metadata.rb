@@ -10,8 +10,8 @@ version '2.19.1'
   supports os
 end
 
-source_url 'https://github.com/escapestudios-cookbooks/newrelic' if respond_to?(:source_url)
-issues_url 'https://github.com/escapestudios-cookbooks/newrelic/issues' if respond_to?(:issues_url)
+source_url 'https://github.com/earzur/newrelic' if respond_to?(:source_url)
+issues_url 'https://github.com/earzur/newrelic/issues' if respond_to?(:issues_url)
 
 depends 'python'
 depends 'curl'
